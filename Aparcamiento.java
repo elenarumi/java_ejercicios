@@ -45,6 +45,8 @@ public class Aparcamiento {
                 }
                 System.out.println("¡MUCHAS GRACIAS POR SU COMPRA!");
             }
+            teclado = new Scanner(System.in);
+        }
         }
         System.out.println("Cantidad de servicios contratados de tarifa 1: " + cont1);
         System.out.println("Cantidad de servicios contratados de tarifa 2: " + cont2);
