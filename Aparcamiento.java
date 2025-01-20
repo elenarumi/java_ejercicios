@@ -1,3 +1,4 @@
+package Aparcamiento;
 import java.util.Scanner;
 
 public class Aparcamiento {
@@ -16,7 +17,6 @@ public class Aparcamiento {
                 System.out.println("1 - por hora;");
                 System.out.println("2 - media jornada, 5 horas;");
                 System.out.println("3 - jornada completa.");
-                teclado = new Scanner(System.in);
                 tarifa = teclado.nextInt();
 
                 if (tarifa <= 0 || tarifa > 3) {
@@ -45,9 +45,10 @@ public class Aparcamiento {
                 }
                 System.out.println("¡MUCHAS GRACIAS POR SU COMPRA!");
             }
-            teclado = new Scanner(System.in);
+            teclado.nextLine(); // Clear buffer after reading integer
         }
-        }
+        
+        // Moved this part outside the loop
         System.out.println("Cantidad de servicios contratados de tarifa 1: " + cont1);
         System.out.println("Cantidad de servicios contratados de tarifa 2: " + cont2);
         System.out.println("Cantidad de servicios contratados de tarifa 3: " + cont3);
