@@ -3,24 +3,24 @@ import java.util.Scanner;
 
 public class vectores2 {
     public static void main(String[] args) {
-          int numero [] =new int [10];
+          int numeros [] = new int [10];
           Scanner teclado = new Scanner(System.in);
       
-          for (int i=0, i<numeros.length, i++) {
+          for (int i = 0; i < numeros.length; i++) {
               System.out.println("Introduce el número para el índice" + i);
               numeros[i]= teclado.nextInt();
           }
       int mayor = Integer.MIN_VALUE;
-          for (int i=0, i<numeros.length, i++) {
-                if (numeros[i]>mayor) {
+          for (int i = 0; i < numeros.length; i++) {
+                if (numeros[i] > mayor) {
                   mayor = numeros[i];
                 }
 
           }
 
       int menor = Integer.MAX_VALUE;
-          for (int i=0, i<numeros.length, i++) {
-                if (numeros[i]<menor) {
+          for (int i = 0; i < numeros.length; i++) {
+                if (numeros[i] < menor) {
                   menor = numeros[i];
                 }
 
@@ -32,7 +32,7 @@ public class vectores2 {
       
         
                                         }
-             teclado.close();
+             
 
                                             }
                           
