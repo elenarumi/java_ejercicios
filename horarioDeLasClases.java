@@ -1,6 +1,7 @@
+package horarioDeLasClases;
 import java.util.Scanner;
 
-public class IntegradorCondicional {
+public class horarioDeLasClases {
     public static void main(String[]args) {
         int edad;
         Scanner teclado = new Scanner(System.in);

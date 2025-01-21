@@ -1,7 +1,7 @@
-
+package subscription;
 import java.util.Scanner;
 
-public class Subscription {
+public class subscription {
     public static void main(String[] args) {
 
         boolean subscription = true;
