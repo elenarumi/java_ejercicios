@@ -1,3 +1,4 @@
+package contadorSencillo;
 import java.util.Scanner;
 
 public class contadorSencillo {
