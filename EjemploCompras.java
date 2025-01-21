@@ -1,3 +1,4 @@
+package EjemploCompras;
 import java.util.Scanner;
 
 public class EjemploCompras {
