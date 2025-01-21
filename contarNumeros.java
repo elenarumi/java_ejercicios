@@ -6,9 +6,9 @@ public class contarNumeros {
           int numeros [] =new int [10];
           Scanner teclado = new Scanner(System.in);
       
-          for (int i=0, i<numeros.length, i++) {
+          for (int i=0; i < numeros.length; i++) {
               System.out.println("Introduce el número para el índice" + i);
-              numeros[i]= teclado.nextInt();
+              numeros[i] = teclado.nextInt();
           }
 
 
@@ -27,10 +27,10 @@ public class contarNumeros {
         } else {
             System.out.println("El número 3 no fue introducido.");
         }
-      
+        teclado.close();
         
                                         }
-             teclado.close();
+           
 
                                             }
                           
