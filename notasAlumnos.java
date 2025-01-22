@@ -1,7 +1,7 @@
-package notasAlumnosMatriz;
+package notasAlumnos;
 import java.util.Scanner;
 
-public class notasAlumnosMatriz {
+public class notasAlumnos {
     public static void main(String[] args) {
         double notas[][] = new double[4][3]; // Matriz para almacenar las notas de los alumnos
         double promedios[] = new double[4]; // Vector para almacenar los promedios
