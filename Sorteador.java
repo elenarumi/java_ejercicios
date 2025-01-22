@@ -1,0 +1,60 @@
+pacakge igu;
+
+import java.util.HashSet;
+import java.util.Random;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+public class Sorteador {
+
+    private HashSet<String> numerosSorteados = new HashSet<>();
+    private int contSorteos = 0;
+
+    private void btnSortearActionPerformed(java.awt.event.ActionEvent evt) {
+        if (!txtCantGanadores.getText().equals("")) {
+            int cantGan = Integer.parseInt(txtCantGanadores.getText());
+
+            String mes = (String) cmbMes.getSelectedItem();
+            String min = "01";
+            String max;
+
+            if (mes.equals("02")) {
+                max = "28";
+            } else if (mes.equals("11") || mes.equals("06") || mes.equals("04") || mes.equals("09")) {
+                max = "30";
+            } else {
+                max = "31";
+            }
+
+            Random numRandom = new Random();
+            int minimo = Integer.parseInt(min);
+            int maximo = Integer.parseInt(max);
+
+            for (int i = 0; i < cantGan; i++) {
+                String numeroSorteado;
+                do {
+                    int randomDia = numRandom.nextInt(maximo - minimo + 1) + minimo;
+                    int randomTicket = numRandom.nextInt(9999) + 1; // Rango de 0001 a 9999
+                    numeroSorteado = agregarCeros(randomDia, mes, randomTicket);
+                } while (numerosSorteados.contains(numeroSorteado));
+
+                numerosSorteados.add(numeroSorteado);
+                contSorteos++;
+
+                DefaultTableModel modelo = (DefaultTableModel) tblGanadores.getModel();
+                Object[] objeto = {contSorteos, numeroSorteado};
+                modelo.addRow(objeto);
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Es necesario introducir la cantidad de ganadores");
+        }
+    }
+
+    public String agregarCeros(int randomDia, String mes, int randomTicket) {
+        String diaConCeros = (randomDia < 10) ? "0" + randomDia : Integer.toString(randomDia);
+        String ticketConCeros = String.format("%04d", randomTicket);
+
+        return diaConCeros + mes + ticketConCeros;
+    }
+}
