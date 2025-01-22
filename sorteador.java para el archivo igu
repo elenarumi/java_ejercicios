@@ -1,3 +1,5 @@
+//Necesita NetBeans
+
 pacakge igu;
 
 import java.util.HashSet;
@@ -5,10 +7,10 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class Sorteador {
+public class sorteador {
 
     private HashSet<String> numerosSorteados = new HashSet<>();
-    private int contSorteos = 0;
+    int contSorteos = 0;
 
     private void btnSortearActionPerformed(java.awt.event.ActionEvent evt) {
         if (!txtCantGanadores.getText().equals("")) {
